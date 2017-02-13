@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import NeonSign from './NeonSign.jsx';
 
 class App extends Component {
   render() {
     return (
-      <h1>Hello React :)</h1>
+      <NeonSign />
     );
   }
 }
