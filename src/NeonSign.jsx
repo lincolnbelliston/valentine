@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
+import LightSwitch from './LightSwitch.jsx';
 
 var NeonSign = React.createClass({
   getInitialState() {
@@ -38,11 +39,14 @@ var NeonSign = React.createClass({
         <Row>
           <Col>
             <div>
-              <span id="neonSwitch"
-                onClick={this.turnonlights}
-                style={{display: this.state.buttonDisplay}}>Turn em on</span>
               <span id="lights" className={this.state.className}>will u b my<br />valentine?</span>
             </div>
+          </Col>
+        </Row>
+        <br /><br /><br />
+        <Row>
+          <Col>
+            <LightSwitch toggleLights={this.toggleLights} lightIsOn={this.state.lightIsOn}/>
           </Col>
         </Row>
       </Grid>
